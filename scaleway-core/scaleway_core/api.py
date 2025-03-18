@@ -166,7 +166,7 @@ class API:
             headers=headers,
             data=raw_body,
             verify=not self.client.api_allow_insecure,
-        )
+        timeout=60)
 
         logger.log_response(
             response=response,
